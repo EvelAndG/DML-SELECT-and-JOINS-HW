@@ -87,11 +87,29 @@ FROM (students INNER JOIN registration ON students.sid = registration.sid) INNER
 */
 
 /* 1.) */
+.print
+.print '#1'
 SELECT * FROM courses;
 
 
 /* 2.) */
+.print ' '
+.print '#2'
 SELECT students.fname, students.lname, courses.cname
 FROM (students INNER JOIN registration ON students.sid = registration.sid) INNER JOIN courses ON courses.cid = registration.cid;
 
+/* 3.) */
+.print ' '
+.print '#3'
+SELECT students.fname, students.lname, courses.cname
+FROM (students INNER JOIN registration ON students.sid = registration.sid)
+INNER JOIN courses ON courses.cid = registration.cid
+WHERE cname = 'organic chemistry';
 
+/* 4.) */
+.print ' '
+.print '#4'
+SELECT students.fname, students.lname, courses.cname
+FROM (students INNER JOIN registration ON students.sid = registration.sid)
+INNER JOIN courses ON courses.cid = registration.cid
+WHERE fname = 'Tad';
