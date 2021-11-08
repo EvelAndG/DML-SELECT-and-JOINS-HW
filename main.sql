@@ -81,7 +81,17 @@ VALUES('chem101','1'),
 --Write your queries below. =)
 
 
+/*
 SELECT students.fname,students.lname, courses.cname
-FROM (students INNER JOIN registration ON students.sid = registration.sid) INNER JOIN courses ON courses.cid = registration.cid
+FROM (students INNER JOIN registration ON students.sid = registration.sid) INNER JOIN courses ON courses.cid = registration.cid;
+*/
+
+/* 1.) */
+SELECT * FROM courses;
+
+
+/* 2.) */
+SELECT students.fname, students.lname, courses.cname
+FROM (students INNER JOIN registration ON students.sid = registration.sid) INNER JOIN courses ON courses.cid = registration.cid;
 
 
